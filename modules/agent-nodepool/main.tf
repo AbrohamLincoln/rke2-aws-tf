@@ -120,6 +120,7 @@ module "nodepool" {
   iam_instance_profile        = var.iam_instance_profile == "" ? module.iam[0].iam_instance_profile : var.iam_instance_profile
   asg                         = var.asg
   spot                        = var.spot
+  health_check_grace_period   = var.health_check_grace_period
 
   tags = merge({
     "Role" = "agent",

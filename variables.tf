@@ -150,3 +150,8 @@ variable "enable_ccm" {
   type        = bool
   default     = false
 }
+
+variable "health_check_grace_period" {
+  type    = number
+  default = "300"
+}
